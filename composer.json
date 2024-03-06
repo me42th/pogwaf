@@ -1,0 +1,27 @@
+{
+    "name": "me42th/pogwaf",
+    "description": "Package to mitigate malicious robot risks and spending",
+    "type": "library",
+    "license": "Unlicense",
+    "autoload": {
+        "psr-4": {
+            "Me42th\\Pogwaf\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "me42th",
+            "email": "david.meth@hotmail.com"
+        }
+    ],
+    "require": {
+        "laravel/laravel":"*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Me42th\\Pogwaf\\ServiceProvider"
+            ]
+        }
+    }
+}

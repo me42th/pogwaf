@@ -1,0 +1,23 @@
+<?php
+
+$block_patterns = [
+{BLOCK_PATTERNS}
+];
+
+$free_patterns = [
+{FREE_PATTERNS}
+];
+
+$uri = $_SERVER['REQUEST_URI'];
+
+foreach($free_patterns as $pattern){
+    $uri = str_replace($pattern,'',$uri);
+}
+
+foreach($block_patterns as $pattern){
+    if(strpos($uri, $pattern) !== false){
+        header_remove();
+        http_response_code(404);
+        exit;
+    };
+}
