@@ -7,5 +7,5 @@ php artisan vendor:publish --tag=pogwaf
 ~~~
 After installation, run 
 ~~~shell
-php artisan pogwaf:aply command
+php artisan pogwaf:aply
 ~~~
